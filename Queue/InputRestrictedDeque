@@ -1,0 +1,99 @@
+package QueueImp;
+
+/* IRDE = front or rear dono se deletion -done 
+ * input =only rear end 
+ */
+public class InputRestrictedDeque {
+    int[] arr;
+    int f, r, size;
+
+    public InputRestrictedDeque(int capacity) {
+        arr = new int[capacity];
+        size = capacity;
+        f = -1;
+        r = -1;
+
+    }
+
+    // insert only rear end
+    public void insertRear(int val) {
+        if ((f == 0 && r == size - 1) || (r + 1 == f)) {
+            System.out.println("dequeue is full");
+            return;
+        }
+        // first insertion
+        if (f == -1) {
+            f = r = 0;
+        } else if (r == size - 1) {
+            r = 0;
+        } else {
+            r++;
+        }
+        arr[r] = val;
+        System.out.println("insert at rear " + val);
+    }
+
+    // delete fromfront
+    public void deleteFront() {
+        if (f == -1) {
+            System.out.println("dequeue is empty");
+            return;
+        }
+        System.out.println("deleted from front" + arr[f]);
+        if (f == r) {
+            f = r = -1;
+        } else if (f == size - 1) {
+            f = 0;
+        } else {
+            f++;
+        }
+    }
+
+    // delete from rear
+    public void deleteRear() {
+        if (r == -1) {
+            System.out.println("queue is empty ");
+            return;
+        }
+        System.out.println("deleted from rear" + arr[r]);
+
+        if (r == f) {
+            f = r = -1;
+        } else if (r == 0) {
+            r = size - 1;
+        } else {
+            r--;
+        }
+    }
+
+    public void display() {
+        if (f == -1) {
+            System.out.println("dequeue is empty");
+            return;
+        }
+        System.out.println("deque contents");
+        for (int i = f; i < r; i++) {
+            System.out.println("arr " + arr[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        InputRestrictedDeque dq = new InputRestrictedDeque(5);
+        dq.insertRear(10);
+        dq.insertRear(20);
+        dq.insertRear(30);
+        dq.display();
+
+        dq.deleteFront(); // removes 10
+        dq.deleteRear(); // removes 30
+        dq.display();
+
+        dq.insertRear(40);
+        dq.insertRear(50);
+        dq.insertRear(60); // this will fill the deque
+        dq.display();
+
+        dq.insertRear(70);
+    }
+
+}
