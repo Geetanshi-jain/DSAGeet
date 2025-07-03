@@ -1,0 +1,3 @@
+1. concept of linkedlist
+2.dispaly Linked list using while loop, recursion 
+3.implement a mth find a length of linked list 
