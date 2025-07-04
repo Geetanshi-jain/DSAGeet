@@ -1,3 +1,36 @@
 1. concept of linkedlist
 2.dispaly Linked list using while loop, recursion 
 3.implement a mth find a length of linked list 
+4.insert in singlyLL- 
+    4.1 insert at index
+    4.2 insert in last
+    4.3 insert in middle 
+
+5.deletion in linkedlist - 
+    5.1 deletion at starting 
+    5.2 deletion at ending
+    5,3 deletion at idx
+
+6.implemeting get method in Linked list
+
+
+7.Interview purpose of Linked list- 
+7.1 delete Node with node as a given parameter
+7.2 find nth node from end 
+7.3 delete nth node from end
+7.4 interrsection of 2 linkedlist
+7.5 find middle eleement of singlyLL
+7.6 delete middle elm 
+7.7 Linked list cycle 
+7.8 LinkedList cycle2
+7.9 MCQ
+7.10  mereged 2 sorted linked list -O(n)
+7.11 mereged 2 sorted linked list -O(1)
+7.12 Split LL into Lists with odd and even numbers 
+7.13 Remove duplicates from sorted LL
+7.14 reverse a ll -recursively
+7.15 reverse a ll - iterative
+7.16 palindrome LL
+7.17 maximum twin Sum Of LinkedList
+7.18 odd even 
+
