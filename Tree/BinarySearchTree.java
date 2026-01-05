@@ -111,6 +111,17 @@ public static int sumOfNodes(Node root){
     int sd =lh+rh+1;
     return Math.max(sd,Math.max(ld,rd));
    }
+     public static void Klevel(Node root, int level,int k){
+    if(root==null){
+        return;
+    }
+    if(level==k){
+        System.out.print(root.data+" ");
+        return;
+    }
+    Klevel(root.left,level+1,k);
+    Klevel(root.right,level+1,k);
+   }
     public static void main(String[] args) 
     {
         //int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -138,5 +149,7 @@ public static int sumOfNodes(Node root){
      System.out.println(len);
      System.out.println(sumOfNodes(root));
      System.out.println(diameter(root));
+          Klevel(root,1,3);
     }
+
 }
